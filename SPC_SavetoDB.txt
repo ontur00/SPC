@@ -1,0 +1,21 @@
+dbConnection.Execute "delete FROM samoinspekcja where CVT1 Is Null And CVT2 Is Null And CVT3 Is Null And CVT4 Is Null And CVT5 Is Null And CVT6 Is Null And CVT7 Is Null And CVT8 Is Null And CVT9 Is Null And CVT10 Is Null And CVT11 Is Null And CVT12 Is Null"
+
+
+dbConnection.Execute "delete FROM samoinspekcja where CVT1 Is Null And CVT2 Is Null And CVT3 Is Null And CVT4 Is Null And W_CVT5 Is Null And W_CVT6 Is Null And W_CVT7 Is Null And W_CVT8 Is Null And CVT5 Is Null And CVT6 Is Null And CVT7 Is Null And CVT8 Is Null And D1_CVT5 Is Null And D1_CVT6 Is Null And D1_CVT7 Is Null And D1_CVT8 Is Null  And CVT9 Is Null And CVT10 Is Null And CVT11 Is Null And CVT12 Is Null And D2_CVT5 Is Null And D2_CVT6 Is Null And D2_CVT7 Is Null And D2_CVT8 Is Null "
+
+
+Sub kasowaniezer()
+
+    Dim dbConnection As ADODB.Connection
+
+        Set dbConnection = New ADODB.Connection
+
+            dbConnection.Open "DSN=DDPL_INJ;UID=inj;PWD=inj;"
+    
+            dbConnection.Execute "delete FROM samoinspekcja where CVT1 Is Null And CVT2 Is Null And CVT3 Is Null And CVT4 Is Null And W_CVT5 Is Null And W_CVT6 Is Null And W_CVT7 Is Null And W_CVT8 Is Null And CVT5 Is Null And CVT6 Is Null And CVT7 Is Null And CVT8 Is Null And D1_CVT5 Is Null And D1_CVT6 Is Null And D1_CVT7 Is Null And D1_CVT8 Is Null  And CVT9 Is Null And CVT10 Is Null And CVT11 Is Null And CVT12 Is Null And D2_CVT5 Is Null And D2_CVT6 Is Null And D2_CVT7 Is Null And D2_CVT8 Is Null "
+    
+            Application.RefreshDatabaseWindow
+
+        Set dbConnection = Nothing
+    
+End Sub

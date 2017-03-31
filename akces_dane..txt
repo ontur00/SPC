@@ -1,0 +1,105 @@
+2016-12-01
+2017-02-21
+
+347
+
+wykres_samoinspekcja_waga_test
+wykres_samoinspekcja_wymiar1_test
+wykres_samoinspekcja_wymiar2_test
+
+
+
+---------------------------------------------------
+INCOMING
+
+ALEKSANDRA PRZYDACZ
+1564
+
+menu->wykres->wykreslaw-> wykresik-part_no_dane / wykresik-part_no_dane_artur
+Control Chart-> Logo
+
+1. Dane  wykresik_part_no_dane
+2. Co wyswietlic
+3. Value MIN, Value MAX
+	Cav.1
+	Cav.2
+	Cav.
+------------------------------------------------------------------------
+Testy
+
+3D12F51420
+Pomiar 1
+
+W_CVT6test
+D1_CVT5 -> CVT8
+D2_CVT5 -> CVT8
+
+------------------------------------------------------------------------
+Private Sub Polecenie300_Click()
+
+'Sprawdzenie wagi ( czy miesci sie w maximum oraz jest ponad 75%)
+
+If Form_Pomiary.CVT1.Value <= Waga_min_75 Then WagaNG_Min (Form_Pomiary.CVT1.Value) Else
+If Form_Pomiary.CVT1.Value >= Waga_max_75 Then WagaNG_Max (Form_Pomiary.CVT1.Value) Else
+
+If Form_Pomiary.CVT2.Value <= Waga_min_75 Then WagaNG_Min (Form_Pomiary.CVT2.Value) Else
+If Form_Pomiary.CVT2.Value >= Waga_max_75 Then WagaNG_Max (Form_Pomiary.CVT2.Value) Else
+
+If Form_Pomiary.CVT3.Value <= Waga_min_75 Then WagaNG_Min (Form_Pomiary.CVT3.Value) Else
+If Form_Pomiary.CVT3.Value >= Waga_max_75 Then WagaNG_Max (Form_Pomiary.CVT3.Value) Else
+
+If Form_Pomiary.CVT4.Value <= Waga_min_75 Then WagaNG_Min (Form_Pomiary.CVT4.Value) Else
+If Form_Pomiary.CVT4.Value >= Waga_max_75 Then WagaNG_Max (Form_Pomiary.CVT4.Value) Else
+
+'Sprawdzenie pomiaru 1 ( czy miesci sie w maximum oraz jest ponad 75%)
+
+If Form_Pomiary.CVT5.Value <= Wym1_min_75 Then Dim1NG_Min (Form_Pomiary.CVT5.Value) Else
+If Form_Pomiary.CVT5.Value >= Wym1_max_75 Then Dim1NG_Max (Form_Pomiary.CVT5.Value) Else
+
+If Form_Pomiary.CVT6.Value <= Wym1_min_75 Then Dim1NG_Min (Form_Pomiary.CVT6.Value) Else
+If Form_Pomiary.CVT6.Value >= Wym1_max_75 Then Dim1NG_Max (Form_Pomiary.CVT6.Value) Else
+
+If Form_Pomiary.CVT7.Value <= Wym1_min_75 Then Dim1NG_Min (Form_Pomiary.CVT7.Value) Else
+If Form_Pomiary.CVT7.Value >= Wym1_max_75 Then Dim1NG_Max (Form_Pomiary.CVT7.Value) Else
+
+If Form_Pomiary.CVT8.Value <= Wym1_min_75 Then Dim1NG_Min (Form_Pomiary.CVT8.Value) Else
+If Form_Pomiary.CVT8.Value >= Wym1_max_75 Then Dim1NG_Max (Form_Pomiary.CVT8.Value) Else
+
+'Sprawdzenie pomiaru 2 ( czy miesci sie w maximum oraz jest ponad 75%)
+
+If Form_Pomiary.CVT9.Value <= Wym2_min_75 Then Dim2NG_Min (Form_Pomiary.CVT9.Value) Else
+If Form_Pomiary.CVT9.Value >= Wym2_max_75 Then Dim2NG_Max (Form_Pomiary.CVT9.Value) Else
+
+If Form_Pomiary.CVT10.Value <= Wym2_min_75 Then Dim2NG_Min (Form_Pomiary.CVT10.Value) Else
+If Form_Pomiary.CVT10.Value >= Wym2_max_75 Then Dim2NG_Max (Form_Pomiary.CVT10.Value) Else
+
+If Form_Pomiary.CVT11.Value <= Wym2_min_75 Then Dim2NG_Min (Form_Pomiary.CVT11.Value) Else
+If Form_Pomiary.CVT11.Value >= Wym2_max_75 Then Dim2NG_Max (Form_Pomiary.CVT11.Value) Else
+
+If Form_Pomiary.CVT11.Value <= Wym2_min_75 Then Dim2NG_Min (Form_Pomiary.CVT12.Value) Else
+If Form_Pomiary.CVT11.Value >= Wym2_max_75 Then Dim2NG_Max (Form_Pomiary.CVT12.Value) Else
+
+
+
+If czy_ng = 0 Then Zapisz_pomiary_OK Else Zapisz_Pomiary_NG
+
+czy_ng = 0
+
+End Sub
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+192.168.0.141
+192.168.0.175
+

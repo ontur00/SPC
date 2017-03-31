@@ -1,0 +1,79 @@
+TFT making application 
+
+Process Type
+Defect Type
+Date
+PPM
+NG Q'TY
+
+
+//ToDO
+							Is Null And
+Dodaj do bazy cavity W_CVT9, W_CVT10, W_CVT11, W_CVT12
+					D1_CVT9, D1_CVT10, D1_CVT11, D1_CVT12
+					D2_CVT9, D2_CVT10, D2_CVT11, D2_CVT12,
+					
+					W_CVT9 Is Null And W_CVT10 Is Null And W_CVT11 Is Null And W_CVT12 Is Null And
+					D1_CVT9 Is Null And D1_CVT10 Is Null And D1_CVT11 Is Null And D1_CVT12 Is Null And
+					AND D2_CVT9 Is Null And D2_CVT10 Is Null And D2_CVT11 Is Null And D2_CVT12 Is Null
+
+Pomiary
+POmiary -> 
+Styl tła		Normalny
+kolor tła 		#F9CDAA
+				Pełny
+				Włosowa
+				Tło 1, Ciemniejszy 35%
+				
+					
+------------------------------------------------------------------------
+[F_Weight_min].[Value]					235, 28, 38
+[F_Weight_max].[Value]
+[wOptMax].[Value]
+[wOptMin].[Value]						254, 242, 0
+
+[F_Dim1_min].[Value]
+[F_Dim1_max].[Value]
+[wm1OptMax].[Value]
+[wm1OptMin].[Value]
+
+[F_Dim2_max].[Value]
+[F_Dim2_min].[Value]
+[wm2OptMax].[Value]
+[wm2OptMin].[Value]
+
+------------------------------------------------------------------------
+samoinspekcja_Kwerenda - dodaj 			Cavity 5.6.7...
+wykres_samoinskepcja_waga_75   			Cavity 5.6.7...
+wykres_samoinskepcja_waga_75_filtr		Cavity
+
+wykres_samoinspekcja_waga_75_filtr
+
+wykres_samoinspekcja_wymiar2_75_filtr
+wykres_samoinspekcja_wymiar2_75_all
+
+0,529cm
+22,705cm
+
+Włosowa
+Tekst 1
+
+
+wykres_samoinspekcja_wymiar1_75_filtr
+wykres_samoinspekcja_wymiar1_75_all
+
+
+2,753cm
+
+[F_Dim1_min].[Value]
+[F_Dim1_max].[Value]
+[wm1OptMax].[Value]
+[wm1OptMin].[Value]
+
+[F_Dim2_min].[Value]
+[F_Dim2_max].[Value]
+[wm2OptMax].[Value]
+[wm2OptMin].[Value]
+
+F_Dim2_min
+F_Dim2_max

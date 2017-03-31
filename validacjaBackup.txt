@@ -1,0 +1,524 @@
+Sub kasowaniezer()
+
+    Dim dbConnection As ADODB.Connection
+
+        Set dbConnection = New ADODB.Connection
+
+            dbConnection.Open "DSN=DDPL_INJ;UID=inj;PWD=inj;"
+    
+            dbConnection.Execute "delete FROM samoinspekcja where CVT1 Is Null And CVT2 Is Null And CVT3 Is Null And CVT4 Is Null And W_CVT5 Is Null And W_CVT6 Is Null And W_CVT7 Is Null And W_CVT8 Is Null And  W_CVT9 Is Null And W_CVT10 Is Null And W_CVT11 Is Null And W_CVT12 Is Null And CVT5 Is Null And CVT6 Is Null And CVT7 Is Null And CVT8 Is Null And D1_CVT5 Is Null And D1_CVT6 Is Null And D1_CVT7 Is Null And D1_CVT8 Is Null  And D1_CVT9 Is Null And D1_CVT10 Is Null And D1_CVT11 Is Null And D1_CVT12 Is Null And CVT9 Is Null And CVT10 Is Null And CVT11 Is Null And CVT12 Is Null And D2_CVT5 Is Null And D2_CVT6 Is Null And D2_CVT7 Is Null And D2_CVT8 Is Null AND D2_CVT9 Is Null And D2_CVT10 Is Null And D2_CVT11 Is Null And D2_CVT12 Is Null"
+    
+            Application.RefreshDatabaseWindow
+
+        Set dbConnection = Nothing
+    
+End Sub
+--------------------------------------------------------------
+Sub CVT5test()
+'test wagi
+    If Form_Pomiary.CVT5.Value <= Wym1_min_75 Then
+        WagaNG_Min (Form_Pomiary.CVT5.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT5.Value >= Wym1_min_75 Then
+        WagaNG_Max (Form_Pomiary.CVT5.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT5.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT5.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.CVT5.Value = 0 Then nic
+    
+    'MsgBox "CVT5", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+Sub CVT5test()
+'test wymiar 1
+    WagaNG_Min (Form_Pomiary.W_CVT5.[Value])
+    WagaNG_Max (Form_Pomiary.W_CVT5.[Value])
+    If Form_Pomiary.CVT5.Value <= Wym1_min_75 Then Message75 Else
+    If Form_Pomiary.CVT5.Value >= Wym1_max_75 Then Message75 Else
+    If Form_Pomiary.CVT5.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT5.Value >= wym1_max Then ifAndon (2) Else
+  
+    If Form_Pomiary.CVT5.Value = 0 Then nic
+    
+    'MsgBox "CVT5", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+------------------------------------------------------------------------------
+Sub CVT6test()
+'test wagi
+    If Form_Pomiary.CVT6.Value <= Wym1_min_75 Then
+        WagaNG_Min (Form_Pomiary.CVT6.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT6.Value >= Wym1_min_75 Then
+        WagaNG_Max (Form_Pomiary.CVT6.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT6.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT6.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.CVT6.Value = 0 Then nic
+    
+    'MsgBox "CVT6", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+
+Sub CVT6test()
+'test wymiar 1
+    WagaNG_Min (Form_Pomiary.W_CVT6.[Value])
+    WagaNG_Max (Form_Pomiary.W_CVT6.[Value])
+    If Form_Pomiary.CVT6.Value <= Wym1_min_75 Then Message75 Else
+    If Form_Pomiary.CVT6.Value >= Wym1_max_75 Then Message75 Else
+    If Form_Pomiary.CVT6.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT6.Value >= wym1_max Then ifAndon (2) Else
+    If Form_Pomiary.CVT6.Value = 0 Then nic
+    
+    'MsgBox "CVT6", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+------------------------------------------------------------------------------
+Sub CVT7test()
+'test wagi
+    If Form_Pomiary.CVT7.Value <= Wym1_min_75 Then
+        WagaNG_Min (Form_Pomiary.CVT7.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT7.Value >= Wym1_min_75 Then
+        WagaNG_Max (Form_Pomiary.CVT7.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT7.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT7.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.CVT7.Value = 0 Then nic
+    
+    'MsgBox "CVT7", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+Sub CVT7test()
+'test wymiar 1
+    WagaNG_Min (Form_Pomiary.W_CVT7.[Value])
+    WagaNG_Max (Form_Pomiary.W_CVT7.[Value])
+    If Form_Pomiary.CVT7.Value <= Wym1_min_75 Then Message75 Else
+    If Form_Pomiary.CVT7.Value >= Wym1_max_75 Then Message75 Else
+    If Form_Pomiary.CVT7.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT7.Value >= wym1_max Then ifAndon (2) Else
+    If Form_Pomiary.CVT7.Value = 0 Then nic
+    
+    'MsgBox "CVT7", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+------------------------------------------------------------------------------
+Sub CVT8test()
+'test wagi
+    If Form_Pomiary.CVT8.Value <= Wym1_min_75 Then
+        WagaNG_Min (Form_Pomiary.CVT8.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT8.Value >= Wym1_min_75 Then
+        WagaNG_Max (Form_Pomiary.CVT8.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT8.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT8.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.CVT8.Value = 0 Then nic
+    
+    'MsgBox "CVT8", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+
+Sub CVT8test()
+'test wymiar 1
+    WagaNG_Min (Form_Pomiary.W_CVT8.[Value])
+    WagaNG_Max (Form_Pomiary.W_CVT8.[Value])
+    If Form_Pomiary.CVT8.Value <= Wym1_min_75 Then Message75 Else
+    If Form_Pomiary.CVT8.Value >= Wym1_max_75 Then Message75 Else
+    If Form_Pomiary.CVT8.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT8.Value >= wym1_max Then ifAndon (2) Else
+    If Form_Pomiary.CVT8.Value = 0 Then nic
+    
+    'MsgBox "CVT8", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+------------------------------------------------------------------------------
+Sub D1_CVT5test()
+'test wagi
+    If Form_Pomiary.D1_CVT5.Value <= Wym1_min_75 Then
+        WagaNG_Min (Form_Pomiary.D1_CVT5.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D1_CVT5.Value >= Wym1_min_75 Then
+        WagaNG_Max (Form_Pomiary.D1_CVT5.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D1_CVT5.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.D1_CVT5.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.D1_CVT5.Value = 0 Then nic
+    
+    'MsgBox "D1_CVT5", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+Sub D1_CVT5test()
+'test wymiar 1
+    If Form_Pomiary.D1_CVT5.Value <= Wym1_min_75 Then Message75 Else
+    If Form_Pomiary.D1_CVT5.Value >= Wym1_max_75 Then Message75 Else
+    If Form_Pomiary.D1_CVT5.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.D1_CVT5.Value >= wym1_max Then ifAndon (2) Else
+    If Form_Pomiary.D1_CVT5.Value = 0 Then nic
+    
+    'MsgBox "CVT8", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+------------------------------------------------------------------------------
+Sub D1_CVT6test()
+'test wagi
+    If Form_Pomiary.D1_CVT6.Value <= Wym1_min_75 Then
+        WagaNG_Min (Form_Pomiary.D1_CVT6.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D1_CVT6.Value >= Wym1_min_75 Then
+        WagaNG_Max (Form_Pomiary.D1_CVT6.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D1_CVT6.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.D1_CVT6.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.D1_CVT6.Value = 0 Then nic
+    
+    'MsgBox "D1_CVT6", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+Sub D1_CVT6test()
+'test wymiar 1
+    If Form_Pomiary.D1_CVT6.Value <= Wym1_min_75 Then Message75 Else
+    If Form_Pomiary.D1_CVT6.Value >= Wym1_max_75 Then Message75 Else
+    If Form_Pomiary.D1_CVT6.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.D1_CVT6.Value >= wym1_max Then ifAndon (2) Else
+    If Form_Pomiary.D1_CVT6.Value = 0 Then nic
+    
+    'MsgBox "CVT8", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+------------------------------------------------------------------------------
+Sub D1_CVT7test()
+'test wagi
+    If Form_Pomiary.D1_CVT7.Value <= Wym1_min_75 Then
+        WagaNG_Min (Form_Pomiary.D1_CVT7.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D1_CVT7.Value >= Wym1_min_75 Then
+        WagaNG_Max (Form_Pomiary.D1_CVT7.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D1_CVT7.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.D1_CVT7.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.D1_CVT7.Value = 0 Then nic
+    
+    'MsgBox "D1_CVT7", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+Sub D1_CVT7test()
+'test wymiar 1
+    If Form_Pomiary.D1_CVT7.Value <= Wym1_min_75 Then Message75 Else
+    If Form_Pomiary.D1_CVT7.Value >= Wym1_max_75 Then Message75 Else
+    If Form_Pomiary.D1_CVT7.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.D1_CVT7.Value >= wym1_max Then ifAndon (2) Else
+    If Form_Pomiary.D1_CVT7.Value = 0 Then nic
+    
+    'MsgBox "CVT8", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+------------------------------------------------------------------------------
+Sub D1_CVT8test()
+'test wagi
+    If Form_Pomiary.D1_CVT8.Value <= Wym1_min_75 Then
+        WagaNG_Min (Form_Pomiary.D1_CVT8.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D1_CVT8.Value >= Wym1_min_75 Then
+        WagaNG_Max (Form_Pomiary.D1_CVT8.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D1_CVT8.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.D1_CVT8.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.D1_CVT8.Value = 0 Then nic
+    
+    'MsgBox "D1_CVT8", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+
+
+Sub D1_CVT8test()
+'test wymiar 1
+    If Form_Pomiary.D1_CVT8.Value <= Wym1_min_75 Then Message75 Else
+    If Form_Pomiary.D1_CVT8.Value >= Wym1_max_75 Then Message75 Else
+    If Form_Pomiary.D1_CVT8.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.D1_CVT8.Value >= wym1_max Then ifAndon (2) Else
+    If Form_Pomiary.D1_CVT8.Value = 0 Then nic
+    
+    'MsgBox "CVT8", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+------------------------------------------------------------------------------
+Sub CVT9test()
+'test wagi
+    If Form_Pomiary.CVT9.Value <= Wym2_min_75 Then
+        WagaNG_Min (Form_Pomiary.CVT9.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT9.Value >= Wym2_min_75 Then
+        WagaNG_Max (Form_Pomiary.CVT9.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT9.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT9.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.CVT9.Value = 0 Then nic
+    
+    'MsgBox "CVT9", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+Sub CVT9test()
+'test wymiar 2
+    If Form_Pomiary.CVT9.Value <= Wym2_min_75 Then Message75 Else
+    If Form_Pomiary.CVT9.Value >= Wym2_max_75 Then Message75 Else
+    If Form_Pomiary.CVT9.Value <= wym2_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT9.Value >= wym2_max Then ifAndon (2) Else
+    If Form_Pomiary.CVT9.Value = 0 Then nic
+    
+    'MsgBox "CVT9", vbOKOnly Or vbInformation, "Andon Information Box"
+End Sub
+------------------------------------------------------------------------------
+Sub CVT10test()
+'test wagi
+    If Form_Pomiary.CVT10.Value <= Wym2_min_75 Then
+        WagaNG_Min (Form_Pomiary.CVT10.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT10.Value >= Wym2_min_75 Then
+        WagaNG_Max (Form_Pomiary.CVT10.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT10.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT10.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.CVT10.Value = 0 Then nic
+    
+    'MsgBox "CVT10", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+Sub CVT10test()
+'test wymiar 2
+    If Form_Pomiary.CVT10.Value <= Wym2_min_75 Then Message75 Else
+    If Form_Pomiary.CVT10.Value >= Wym2_max_75 Then Message75 Else
+    If Form_Pomiary.CVT10.Value <= wym2_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT10.Value >= wym2_max Then ifAndon (2) Else
+    If Form_Pomiary.CVT10.Value = 0 Then nic
+    
+    'MsgBox "CVT10", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+------------------------------------------------------------------------------
+Sub CVT11test()
+'test wagi
+    If Form_Pomiary.CVT11.Value <= Wym2_min_75 Then
+        WagaNG_Min (Form_Pomiary.CVT11.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT11.Value >= Wym2_min_75 Then
+        WagaNG_Max (Form_Pomiary.CVT11.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT11.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT11.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.CVT11.Value = 0 Then nic
+    
+    'MsgBox "CVT11", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+Sub CVT11test()
+'test wymiar 2
+    If Form_Pomiary.CVT11.Value <= wym2_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT11.Value >= wym2_max Then ifAndon (2) Else
+    If Form_Pomiary.CVT11.Value <= Wym2_min_75 Then Message75 Else
+    If Form_Pomiary.CVT11.Value >= Wym2_max_75 Then Message75 Else
+    If Form_Pomiary.CVT11.Value = 0 Then nic
+    
+    'MsgBox "CVT11", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+------------------------------------------------------------------------------
+Sub CVT12test()
+'test wagi
+    If Form_Pomiary.CVT12.Value <= Wym2_min_75 Then
+        WagaNG_Min (Form_Pomiary.CVT12.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT12.Value >= Wym2_min_75 Then
+        WagaNG_Max (Form_Pomiary.CVT12.[Value])
+        Message75
+    End If
+    If Form_Pomiary.CVT12.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT12.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.CVT12.Value = 0 Then nic
+    
+    'MsgBox "CVT12", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+Sub CVT12test()
+'test wymiar 2
+    If Form_Pomiary.CVT12.Value <= Wym2_min_75 Then Message75 Else
+    If Form_Pomiary.CVT12.Value >= Wym2_max_75 Then Message75 Else
+    If Form_Pomiary.CVT12.Value <= wym2_min Then ifAndon (2) Else
+    If Form_Pomiary.CVT12.Value >= wym2_max Then ifAndon (2) Else
+    If Form_Pomiary.CVT12.Value = 0 Then nic
+    
+    'MsgBox "CVT12", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+------------------------------------------------------------------------------
+Sub D2_CVT5test()
+'test wagi
+    If Form_Pomiary.D2_CVT5.Value <= Wym2_min_75 Then
+        WagaNG_Min (Form_Pomiary.D2_CVT5.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D2_CVT5.Value >= Wym2_min_75 Then
+        WagaNG_Max (Form_Pomiary.D2_CVT5.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D2_CVT5.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.D2_CVT5.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.D2_CVT5.Value = 0 Then nic
+    
+    'MsgBox "D2_CVT5", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+Sub D2_CVT5test()
+'test wymiar 2
+    If Form_Pomiary.D2_CVT5.Value <= Wym2_min_75 Then Message75 Else
+    If Form_Pomiary.D2_CVT5.Value >= Wym2_max_75 Then Message75 Else
+    If Form_Pomiary.D2_CVT5.Value <= wym2_min Then ifAndon (2) Else
+    If Form_Pomiary.D2_CVT5.Value >= wym2_max Then ifAndon (2) Else
+    If Form_Pomiary.D2_CVT5.Value = 0 Then nic
+    
+    'MsgBox "CVT12", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+------------------------------------------------------------------------------
+Sub D2_CVT6test()
+'test wagi
+    If Form_Pomiary.D2_CVT6.Value <= Wym2_min_75 Then
+        WagaNG_Min (Form_Pomiary.D2_CVT6.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D2_CVT6.Value >= Wym2_min_75 Then
+        WagaNG_Max (Form_Pomiary.D2_CVT6.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D2_CVT6.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.D2_CVT6.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.D2_CVT6.Value = 0 Then nic
+    
+    'MsgBox "D2_CVT6", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+Sub D2_CVT6test()
+'test wymiar 2
+    If Form_Pomiary.D2_CVT6.Value <= Wym2_min_75 Then Message75 Else
+    If Form_Pomiary.D2_CVT6.Value >= Wym2_max_75 Then Message75 Else
+    If Form_Pomiary.D2_CVT6.Value <= wym2_min Then ifAndon (2) Else
+    If Form_Pomiary.D2_CVT6.Value >= wym2_max Then ifAndon (2) Else
+    If Form_Pomiary.D2_CVT6.Value = 0 Then nic
+    
+    'MsgBox "CVT12", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+------------------------------------------------------------------------------
+Sub D2_CVT7test()
+'test wagi
+    If Form_Pomiary.D2_CVT7.Value <= Wym2_min_75 Then
+        WagaNG_Min (Form_Pomiary.D2_CVT7.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D2_CVT7.Value >= Wym2_min_75 Then
+        WagaNG_Max (Form_Pomiary.D2_CVT7.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D2_CVT7.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.D2_CVT7.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.D2_CVT7.Value = 0 Then nic
+    
+    'MsgBox "D2_CVT7", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+Sub D2_CVT7test()
+'test wymiar 2
+    If Form_Pomiary.D2_CVT7.Value <= Wym2_min_75 Then Message75 Else
+    If Form_Pomiary.D2_CVT7.Value >= Wym2_max_75 Then Message75 Else
+    If Form_Pomiary.D2_CVT7.Value <= wym2_min Then ifAndon (2) Else
+    If Form_Pomiary.D2_CVT7.Value >= wym2_max Then ifAndon (2) Else
+    If Form_Pomiary.D2_CVT7.Value = 0 Then nic
+    
+    'MsgBox "CVT12", vbOKOnly Or vbInformation, "Andon Information Box"
+------------------------------------------------------------------------------   
+Sub D2_CVT8test()
+'test wagi
+    If Form_Pomiary.D2_CVT8.Value <= Wym2_min_75 Then
+        WagaNG_Min (Form_Pomiary.D2_CVT8.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D2_CVT8.Value >= Wym2_min_75 Then
+        WagaNG_Max (Form_Pomiary.D2_CVT8.[Value])
+        Message75
+    End If
+    If Form_Pomiary.D2_CVT8.Value <= wym1_min Then ifAndon (2) Else
+    If Form_Pomiary.D2_CVT8.Value >= wym1_max Then ifAndon (2) Else
+ 
+    If Form_Pomiary.D2_CVT8.Value = 0 Then nic
+    
+    'MsgBox "D2_CVT8", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+     
+End Sub
+Sub D2_CVT8test()
+'test wymiar 2
+    If Form_Pomiary.D2_CVT8.Value <= Wym2_min_75 Then Message75 Else
+    If Form_Pomiary.D2_CVT8.Value >= Wym2_max_75 Then Message75 Else
+    If Form_Pomiary.D2_CVT8.Value <= wym2_min Then ifAndon (2) Else
+    If Form_Pomiary.D2_CVT8.Value >= wym2_max Then ifAndon (2) Else
+    If Form_Pomiary.D2_CVT8.Value = 0 Then nic
+    
+    'MsgBox "CVT12", vbOKOnly Or vbInformation, "Andon Information Box"
+        
+End Sub
+
+------------------------------------------------------------------------------

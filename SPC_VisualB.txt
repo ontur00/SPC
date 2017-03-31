@@ -1,0 +1,48 @@
+Form_karta_kontrolna_parametrow_wtrusku_insert
+
+wartosc_waga_ng_min_zapis = 0  			Brak inicjalizacji ?
+wartosc_waga_ng_min_zapis
+
+wartosc_dim1_ng_max_zapis
+wartosc_dim1_ng_min_zapis
+
+wartosc_dim2_ng_max_zapis
+wartosc_dim2_ng_min_zapis
+
+
+
+Formatka zgłoszenie = Karta kontrolna parametrow wtrysku insert
+
+
+Sub Message75()			MessageBox
+Form_Activate()			Przed Zgłoszeniem 	
+Zamkniecie Form_Activate -> Zerowanie_zmiennej_globalnej_ng
+
+Meserment cards-> save -> Samoinspekcja
+
+
+Forms - inictialize weight, dimension1 dimensnion2
+
+
+Form_Pomiary.Etykieta312.Caption = Waga_max_75
+Form_Pomiary.Etykieta314.Caption = Waga_min_75
+Form_Pomiary.Etykieta322.Caption = Wym1_max_75
+Form_Pomiary.Etykieta323.Caption = Wym1_min_75
+Form_Pomiary.Etykieta326.Caption = Wym2_max_75
+Form_Pomiary.Etykieta327.Caption = Wym2_min_75
+
+3,899cm
+5,399cm
+1,5
+
+Module1 - Global variable
+
+
+waga_ng_max_bazy75 = wartosc_waga_ng_min_zapis
+waga_ng_min_bazy75 = wartosc_waga_ng_max_zapis
+
+dim1_ng_max_bazy75 = dim1_bg_max, min		wartosc_dim1_ng_min_zapis, wartosc_dim1_ng_max_zapis
+
+dim2_ng_max_bazy75 = wartosc_dim2_ng_min_zapis, wartosc_dim2_ng_max_zapis
+
+Min problem
